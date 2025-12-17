@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title("📊 Data Makro Ekonomi Antar Negara")
 
-df = pd.read_csv("data/macro_data.csv")
+df = pd.read_csv("data/macro_indicators_worldbank_2024.csv")
 
 st.subheader("Tabel Data")
 st.dataframe(df, use_container_width=True)
