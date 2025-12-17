@@ -1,11 +1,13 @@
 import streamlit as st
+import pandas as pd
 
-st.set_page_config(
-    page_title="Women Economic Dashboard",
-    layout="wide"
-)
+st.title("🏠 Home")
 
-st.sidebar.title("Navigation")
-st.sidebar.page_link("Home.py", label="Overview of Womens Data")
-st.sidebar.page_link("Country_Profile.py", label="Country Profile")
-st.sidebar.page_link("Comparison_between_Nations.py", label="Comparison between Nations")
+st.markdown("""
+Selamat datang di dashboard perbandingan indikator ekonomi makro antar negara.
+Gunakan sidebar untuk berpindah halaman.
+""")
+
+df = pd.read_csv("data/macro_indicators_worldbank_2024.csv")
+st.subheader("Preview Data")
+st.dataframe(df, use_container_width=True)

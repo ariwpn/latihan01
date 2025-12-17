@@ -1,13 +1,8 @@
 import streamlit as st
-import pandas as pd
 
-st.title("🏠 Home")
+st.set_page_config(page_title="Dashboard Ekonomi Makro", layout="wide")
 
-st.markdown("""
-Selamat datang di dashboard perbandingan indikator ekonomi makro antar negara.
-Gunakan sidebar untuk berpindah halaman.
-""")
+st.title("📊 Dashboard Ekonomi Makro Antar Negara")
+st.caption("Gunakan sidebar untuk navigasi halaman.")
 
-df = pd.read_csv("data/macro_indicators_worldbank_2024.csv")
-st.subheader("Preview Data")
-st.dataframe(df, use_container_width=True)
+st.success("App berhasil berjalan ✅")
